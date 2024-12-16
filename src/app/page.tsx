@@ -1,9 +1,11 @@
 import Header from "@/sections/Header";
+import Hero from "@/sections/Hero";
 
 const page = () => {
   return (
-    <div className="w-full h-full">
+    <div>
       <Header />
+      <Hero />
     </div>
   );
 };
