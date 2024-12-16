@@ -27,8 +27,8 @@ const navItems = [
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full backdrop-blur-md">
-      <div className="flex items-center justify-between h-20 !max-w-full p-[1rem] md:p-[2rem] lg:p-[4rem]">
-        <div className="text-xl md:text-2xl lg:text-3xl flex items-center font-medium uppercase tracking-tight">
+      <div className="flex items-center justify-between h-20 !max-w-full p-[1rem] md:p-[2rem] lg:p-[2.6rem]">
+        <div className="text-xl md:text-2xl flex items-center font-medium uppercase tracking-tight">
           Pranjal &nbsp; Kuhikar
         </div>
         <div className="flex items-center gap-4">
