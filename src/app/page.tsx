@@ -1,6 +1,7 @@
 import Header from "@/sections/Header";
 import Hero from "@/sections/Hero";
 import Intro from "@/sections/Intro";
+import Projects from "@/sections/Projects";
 
 const page = () => {
   return (
@@ -8,6 +9,7 @@ const page = () => {
       <Header />
       <Hero />
       <Intro />
+      <Projects />
     </div>
   );
 };
