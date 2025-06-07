@@ -24,7 +24,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="bg-stone-900 text-white">
+    <footer className="bg-stone-900 text-white" id="contact">
       <div className="p-[1rem] md:p-[2rem] lg:p-[2.6rem]">
         <div className="py-24 md:py-32 lg:py-40">
           <div className="flex items-center gap-3">

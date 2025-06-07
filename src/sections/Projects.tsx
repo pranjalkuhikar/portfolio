@@ -30,7 +30,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="py-24 md:py-32 lg:py-40">
+    <section className="py-24 md:py-32 lg:py-40" id="projects">
       <div className="p-[1rem] md:p-[2rem] lg:p-[2.6rem]">
         <h2 className="text-4xl md:text-7xl lg:text-8xl">Selected Work</h2>
         <div className="mt-10 md:mt-16 lg:mt-20">

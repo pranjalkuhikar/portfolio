@@ -36,3 +36,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 .container = p-[1rem] md:p-[2rem] lg:p-[2.6rem]
+.section = py-24 md:py-32 lg:py-40

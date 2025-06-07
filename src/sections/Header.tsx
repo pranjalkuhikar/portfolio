@@ -74,8 +74,19 @@ const Header = () => {
     navAnimate,
   ]);
 
+  const handleClickMobileNavItem = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsOpen(false);
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const element = document.getElementById(targetId);
+    element?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <header className="">
+    <header>
       <div
         className="fixed top-0 left-0 w-full h-0 overflow-hidden bg-stone-900"
         ref={navScope}
@@ -85,9 +96,10 @@ const Header = () => {
             <a
               key={label}
               href={href}
-              className="text-stone-200 border-t border-stone-800 last:border-b py-8 group/nav-item relative"
+              className="text-stone-200 border-t border-stone-800 last:border-b py-8 group/nav-item relative isolate"
+              onClick={handleClickMobileNavItem}
             >
-              <div className="p-[1rem] md:p-[2rem] lg:p-[2.6rem] !max-w-full flex items-center justify-between">
+              <div className="p-[1rem] md:py-[1.5rem] md:px-[2rem] lg:py-[1rem] lg:px-[2.6rem] xl:p[2.6rem] !max-w-full flex items-center justify-between">
                 <span className="text-3xl group-hover/nav-item:pl-4 transition-all duration-500">
                   {label}
                 </span>
@@ -106,7 +118,7 @@ const Header = () => {
                   />
                 </svg>
               </div>
-              <div className="absolute w-full h-0 bg-stone-800 group-hover/nav-item:h-full transition duration-500"></div>
+              <div className="absolute w-full h-0 bg-stone-800 group-hover/nav-item:h-full transition-all duration-500 bottom-0 -z-10"></div>
             </a>
           ))}
         </nav>
