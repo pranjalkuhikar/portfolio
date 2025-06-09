@@ -11,7 +11,7 @@ const Button = (
     <>
       <button
         className={twMerge(
-          "h-11 px-6 rounded-xl border border-orange-500 uppercase active:scale-95 inline-flex items-center gap-2 transition duration-500 relative",
+          "h-11 px-6 rounded-xl border border-orange-500 uppercase active:scale-95 inline-flex items-center gap-2 transition duration-500 relative group/button",
           variant === "primary" && "bg-orange-500 text-white",
           variant === "secondary" && "hover:bg-orange-500 hover:text-white",
           variant === "text" &&
