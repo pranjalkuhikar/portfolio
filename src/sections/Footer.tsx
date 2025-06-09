@@ -102,7 +102,7 @@ const Footer = () => {
                   </div>
                 }
               >
-                info@pranjalkuhikar.com
+                pranjalkuhikar123@gmail.com
               </Button>
             </div>
             <div>

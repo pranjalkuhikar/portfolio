@@ -85,6 +85,16 @@ const Header = () => {
     });
   };
 
+  const handleDownloadResume = () => {
+    const resumePath = "/assets/resume.pdf";
+    const link = document.createElement("a");
+    link.href = resumePath;
+    link.download = "Pranjal_Kuhikar_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <header>
       <div
@@ -133,8 +143,12 @@ const Header = () => {
       <div className="fixed top-0 left-0 w-full z-10">
         <div className="flex items-center justify-end h-20 !max-w-full p-[1rem] md:p-[2rem] lg:p-[2.6rem]">
           <div className="flex items-center gap-4">
-            <Button variant="primary" className=" hidden md:inline-flex ">
-              Contact Me
+            <Button
+              variant="primary"
+              className=" hidden md:inline-flex"
+              onClick={handleDownloadResume}
+            >
+              Resume
             </Button>
             <div
               className="px-4 size-14 border bg-stone-200 border-stone-400 rounded-full inline-flex items-center justify-center"
