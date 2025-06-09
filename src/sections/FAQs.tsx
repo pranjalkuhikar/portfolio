@@ -5,24 +5,34 @@ import { twMerge } from "tailwind-merge";
 
 const faqs = [
   {
-    question: "How long does it take to build a website?",
+    question: "What technologies do you specialize in?",
     answer:
-      "It depends on the complexity of the website and the scope of the project.",
+      "I specialize in the MERN stack (MongoDB, Express, React, Node.js) and tools like Next.js, Tailwind CSS, Framer Motion, and more.",
   },
   {
-    question: "What is your development process like?",
+    question: "Do you build mobile-friendly and responsive websites?",
     answer:
-      "I follow a hands-on approach starting with project planning, building out the core features, and regular check-ins to make sure everything matches your needs.",
+      "Yes, I build fully responsive websites that work smoothly across all devices and screen sizes.",
   },
   {
-    question: "Do you work with international clients?",
+    question: "Can you create animations or interactive UI elements?",
     answer:
-      "Yes, I work with clients globally and can accommodate different time zones for meetings and communication.",
+      "Absolutely! I use tools like Framer Motion and GSAP to build smooth and creative user interactions.",
   },
   {
-    question: "What industries do you specialize in?",
+    question: "Do you provide both frontend and backend development?",
     answer:
-      "I have experience across various industries including technology, retail, hospitality, and professional services, bringing fresh perspectives to each project.",
+      "Yes, I handle both frontend and backend using modern technologies, though I specialize more in frontend experiences.",
+  },
+  {
+    question: "Are you open to freelance or remote opportunities?",
+    answer:
+      "Yes, I’m currently available for freelance and remote roles. I can adapt to different time zones and project needs.",
+  },
+  {
+    question: "How do you handle project communication and updates?",
+    answer:
+      "I provide regular updates, share progress through GitHub or task boards, and stay in touch via email or calls as preferred.",
   },
 ];
 
