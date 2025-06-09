@@ -4,6 +4,8 @@ import Button from "@/components/Button";
 import useTextRevealAnimation from "@/hooks/useTextRevealAnimation";
 import { useInView } from "motion/react";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const navItems = [
   {
@@ -38,6 +40,34 @@ const Footer = () => {
     }
   }, [inView, entranceAnimation]);
 
+  const handleCopyEmail = async (email: string) => {
+    try {
+      await navigator.clipboard.writeText(email);
+      toast.success("Email copied to clipboard!", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light", // or "dark" or "colored"
+      });
+    } catch (err) {
+      console.error("Failed to copy email: ", err);
+      toast.error("Failed to copy email.", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
+
   const handleClickNavItem = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
@@ -64,46 +94,49 @@ const Footer = () => {
               >
                 Enough talk, Let&apos;s make something great together.
               </h2>
-              <Button
-                variant="secondary"
-                className="mt-8"
-                iconAfter={
-                  <div className="size-6 overflow-hidden">
-                    <div className="w-12 h-6 flex transition-transform duration-500 group-hover/button:-translate-x-1/2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        className="size-6"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                        />
-                      </svg>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="1.5"
-                        stroke="currentColor"
-                        className="size-6"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                        />
-                      </svg>
+              <div className="relative inline-block">
+                <Button
+                  variant="secondary"
+                  className="mt-8"
+                  onClick={() => handleCopyEmail("pranjalkuhikar123@gmail.com")}
+                  iconAfter={
+                    <div className="size-6 overflow-hidden">
+                      <div className="w-12 h-6 flex transition-transform duration-500 group-hover/button:-translate-x-1/2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="size-6"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth="1.5"
+                          stroke="currentColor"
+                          className="size-6"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                          />
+                        </svg>
+                      </div>
                     </div>
-                  </div>
-                }
-              >
-                pranjalkuhikar123@gmail.com
-              </Button>
+                  }
+                >
+                  pranjalkuhikar123@gmail.com
+                </Button>
+              </div>
             </div>
             <div>
               <nav className="flex flex-col md:items-end gap-8 mt-16 md:mt-0">

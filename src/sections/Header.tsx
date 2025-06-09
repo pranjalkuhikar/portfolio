@@ -2,6 +2,9 @@
 import Button from "@/components/Button";
 import { useEffect, useState } from "react";
 import { motion, useAnimate } from "motion/react";
+import { toast } from "react-toastify";
+// Note: "react-toastify/dist/ReactToastify.css" is already imported in layout.tsx
+// so it doesn't need to be imported again here.
 
 const navItems = [
   {
@@ -93,6 +96,16 @@ const Header = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    toast.success("Resume downloaded!", {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
 
   return (

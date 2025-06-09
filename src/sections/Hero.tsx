@@ -41,6 +41,7 @@ const Hero: FC = () => {
                 >
                   <Button
                     variant="secondary"
+                    id="projects"
                     iconAfter={
                       <div className="overflow-hidden size-5">
                         <div className="h-5 w-10 flex group-hover/button:translate-x-[-65%] transition-transform duration-500">
@@ -84,7 +85,9 @@ const Hero: FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 2.2 }}
                 >
-                  <Button variant="text">Let&apos;s Talk</Button>
+                  <Button variant="text" id="contact">
+                    Let&apos;s Talk
+                  </Button>
                 </motion.div>
               </div>
             </div>
