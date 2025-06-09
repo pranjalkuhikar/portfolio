@@ -19,6 +19,13 @@ const Hero: FC = () => {
     entranceAnimation();
   }, [entranceAnimation]);
 
+  const handleScrollToSection = (targetId: string) => {
+    const element = document.getElementById(targetId);
+    element?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <section>
@@ -41,7 +48,7 @@ const Hero: FC = () => {
                 >
                   <Button
                     variant="secondary"
-                    id="projects"
+                    onClick={() => handleScrollToSection("projects")}
                     iconAfter={
                       <div className="overflow-hidden size-5">
                         <div className="h-5 w-10 flex group-hover/button:translate-x-[-65%] transition-transform duration-500">
@@ -85,7 +92,10 @@ const Hero: FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 2.2 }}
                 >
-                  <Button variant="text" id="contact">
+                  <Button
+                    variant="text"
+                    onClick={() => handleScrollToSection("contact")}
+                  >
                     Let&apos;s Talk
                   </Button>
                 </motion.div>

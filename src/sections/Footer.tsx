@@ -51,7 +51,7 @@ const Footer = () => {
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light", // or "dark" or "colored"
+        theme: "light",
       });
     } catch (err) {
       console.error("Failed to copy email: ", err);
