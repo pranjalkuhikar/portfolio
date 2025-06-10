@@ -32,7 +32,7 @@ const TechStack: FC = () => {
     <section
       id="tech-stack"
       aria-label="My Tech Stack Section"
-      className="bg-white py-20 md:py-28 lg:py-32"
+      className=" py-20 md:py-28 lg:py-32 bg-stone-200"
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-12">
         <h2 className="text-[48px] md:text-[64px] font-extrabold text-center text-gray-900 mb-16 leading-tight">
