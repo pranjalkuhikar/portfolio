@@ -3,6 +3,7 @@ import { Archivo } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const archivo = Archivo({
   display: "swap",
@@ -28,6 +29,7 @@ export default function RootLayout({
       >
         {children}
         <ToastContainer />
+        <Analytics />
       </body>
     </html>
   );
