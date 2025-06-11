@@ -61,11 +61,11 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: `
               default-src 'self';
-              script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.vercel-insights.com;
+              script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.vercel-insights.com https://www.googletagmanager.com https://www.google-analytics.com;
               style-src 'self' 'unsafe-inline';
-              img-src 'self' blob: data:;
+              img-src 'self' blob: data: https://www.google-analytics.com;
               media-src 'none';
-              connect-src 'self' https://vitals.vercel-insights.com;
+              connect-src 'self' https://vitals.vercel-insights.com https://www.google-analytics.com https://region1.google-analytics.com;
               font-src 'self';
               object-src 'none';
               base-uri 'self';
