@@ -89,7 +89,7 @@ const Header = () => {
   };
 
   const handleDownloadResume = () => {
-    const resumePath = "/assets/resume.pdf";
+    const resumePath = "/assets/Pranjal_Kuhikar_Resume.pdf";
     const link = document.createElement("a");
     link.href = resumePath;
     link.download = "Pranjal_Kuhikar_Resume.pdf";

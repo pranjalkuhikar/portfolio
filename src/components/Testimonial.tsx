@@ -86,6 +86,7 @@ const Testimonial = (
         <div
           className="text-3xl md:text-5xl lg:text-6xl mt-8 md:mt-0"
           ref={quoteScope}
+          suppressHydrationWarning={true}
         >
           <span>&ldquo;</span>
           {quote}

@@ -2,38 +2,28 @@
 
 import image1 from "@/assets/images/testimonial-1.jpg";
 import image2 from "@/assets/images/testimonial-2.jpg";
-import image3 from "@/assets/images/testimonial-3.jpg";
 import { useScroll, motion, useTransform, AnimatePresence } from "motion/react";
 import { useRef, useState } from "react";
 import Testimonial from "@/components/Testimonial";
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    company: "Pixel Perfect",
-    role: "Head of Design",
+    name: "Prashant Prabodh",
+    company: "IXO Labs",
+    role: "Chief Architect and ex-consultant",
     quote:
-      "Alex's expertise in both technical development and design created a beautiful, high-performing website.",
+      "Pranjal Kuhukar is a reliable and committed IT professional. As a junior developer, he quickly learns, works hard, and delivers quality results. His initiative and persistence—like starting his own website—set him apart. I highly recommend him for any role that values dedication and growth.",
     image: image1,
     imagePositionY: 0.2,
   },
   {
-    name: "Marcus Rodriguez",
-    company: "Craft Coffee Co.",
-    role: "Founder",
+    name: "Sahil Vaidya",
+    company: "Technology World Creater",
+    role: "CEO and Founder",
     quote:
-      "Alex transformed our boutique coffee brand with a website that perfectly balances aesthetics and functionality.",
+      "Sahil Vaidya brought our vision to life with clean code, smart design, and professional delivery. A reliable and skilled web developer.",
     image: image2,
     imagePositionY: 0.1,
-  },
-  {
-    name: "Emily Watson",
-    company: "Studio Minimal",
-    role: "Creative Director",
-    quote:
-      "The collaborative process was amazing. Alex brought lots of fresh perspectives and innovative solutions.",
-    image: image3,
-    imagePositionY: 0.55,
   },
 ];
 
@@ -98,6 +88,7 @@ const Testimonials = () => {
           <button
             className="border border-stone-400 size-11 inline-flex items-center justify-center rounded-full hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-300"
             onClick={handleClickPrev}
+            title="Previous testimonial"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -117,6 +108,7 @@ const Testimonials = () => {
           <button
             className="border border-stone-400 size-11 inline-flex items-center justify-center rounded-full hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-300"
             onClick={handleClickNext}
+            title="Next testimonial"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

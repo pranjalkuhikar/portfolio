@@ -20,7 +20,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "Movie App (React.js)",
+    name: "CineVerse (React.js)",
     image: image1,
     githubUrl: "https://github.com/pranjalkuhikar/MovieApp/",
     liveDemoUrl: "https://movie-app-nine-khaki.vercel.app/",
