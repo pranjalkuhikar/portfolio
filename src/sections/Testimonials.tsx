@@ -12,7 +12,7 @@ const testimonials = [
     company: "IXO Labs",
     role: "Chief Architect and ex-consultant",
     quote:
-      "Pranjal Kuhukar is a reliable and committed IT professional. As a junior developer, he quickly learns, works hard, and delivers quality results. His initiative and persistence—like starting his own website—set him apart. I highly recommend him for any role that values dedication and growth.",
+      "Pranjal Kuhikar is a reliable and committed IT professional. As a junior developer, he quickly learns, works hard, and delivers quality results. His initiative and persistence like starting his own website set him apart. I highly recommend him for any role that values dedication and growth.",
     image: image1,
     imagePositionY: 0.2,
   },
@@ -21,7 +21,7 @@ const testimonials = [
     company: "Technology World Creater",
     role: "CEO and Founder",
     quote:
-      "Sahil Vaidya brought our vision to life with clean code, smart design, and professional delivery. A reliable and skilled web developer.",
+      "Pranjal Kuhikar brought our vision to life with clean code, smart design, and professional delivery. A reliable and skilled web developer.",
     image: image2,
     imagePositionY: 0.1,
   },
