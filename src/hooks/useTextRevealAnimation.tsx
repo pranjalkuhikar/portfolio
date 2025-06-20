@@ -6,7 +6,7 @@ const useTextRevealAnimation = () => {
   const [scope, animate] = useAnimate();
 
   useLayoutEffect(() => {
-    if (!scope.current || !(scope.current instanceof Element)) return;
+    if (!scope.current) return;
     try {
       new SplitType(scope.current, {
         types: "lines,words",
@@ -18,8 +18,7 @@ const useTextRevealAnimation = () => {
   }, [scope]);
 
   const entranceAnimation = () => {
-    if (!scope.current || !(scope.current instanceof Element))
-      return Promise.resolve();
+    if (!scope.current) return Promise.resolve();
     try {
       return animate(
         scope.current.querySelectorAll(".word"),
@@ -32,8 +31,7 @@ const useTextRevealAnimation = () => {
   };
 
   const exitAnimation = () => {
-    if (!scope.current || !(scope.current instanceof Element))
-      return Promise.resolve();
+    if (!scope.current) return Promise.resolve();
     try {
       return animate(
         scope.current.querySelectorAll(".word"),
