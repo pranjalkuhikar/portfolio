@@ -12,7 +12,7 @@ const useTextRevealAnimation = () => {
         types: "lines,words",
         tagName: "span",
       });
-    } catch (e) {
+    } catch {
       // Ignore SplitType errors
     }
   }, [scope]);
@@ -26,7 +26,7 @@ const useTextRevealAnimation = () => {
         { transform: "translateY(0)" },
         { duration: 0.5, delay: stagger(0.15) }
       );
-    } catch (e) {
+    } catch {
       return Promise.resolve();
     }
   };
@@ -45,7 +45,7 @@ const useTextRevealAnimation = () => {
           }),
         }
       );
-    } catch (e) {
+    } catch {
       return Promise.resolve();
     }
   };
